@@ -4,27 +4,82 @@
 <meta charset="UTF-8">
 <title>Mi Portafolio</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Arial, sans-serif; }
-  
-  header { background: #2c3e50; color: white; padding: 60px 20px; text-align: center; }
-  header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-  header p { font-size: 1.2rem; opacity: 0.8; }
-  
-  nav { background: #34495e; padding: 15px; text-align: center; }
-  nav a { color: white; margin: 0 15px; text-decoration: none; }
-  
-  section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
-  section h2 { margin-bottom: 20px; color: #2c3e50; }
-  
-  .proyecto { background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
-  
-  footer { background: #2c3e50; color: white; text-align: center; padding: 20px; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #fffafc;
+    color: #4a4a4a;
+  }
+
+  header {
+    background: #b8d8e3;
+    color: #2d4a53;
+    padding: 60px 20px;
+    text-align: center;
+    transition: 0.4s;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    background: #d8c7f0;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav a {
+    color: #4f3c68;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  section h2 {
+    margin-bottom: 20px;
+    color: #6b5b95;
+  }
+
+  .proyecto {
+    background: #fdf1d6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  footer {
+    background: #b8d8e3;
+    color: #2d4a53;
+    text-align: center;
+    padding: 20px;
+  }
 </style>
 </head>
 <body>
 
-  <header>
+  <header id="header">
     <h1>Johan Estiven Rios Torres</h1>
     <p>Técnico en Desarrollo de Sistemas y Tecnólogo en Análisis y Desarrollo de Software en formación</p>
   </header>
@@ -47,7 +102,7 @@
 
   <section id="proyectos">
     <h2>Mis Proyectos</h2>
-    
+
     <div class="proyecto">
       <h3>Make Your Day</h3>
       <p>
@@ -75,7 +130,16 @@
   </footer>
 
   <script>
-    // Cambiar el color del header al hacer scroll
+    // Cambia ligeramente el color del encabezado al hacer scroll
+    window.addEventListener("scroll", function() {
+      const header = document.getElementById("header");
+
+      if (window.scrollY > 50) {
+        header.style.background = "#cfe7d8";
+      } else {
+        header.style.background = "#b8d8e3";
+      }
+    });
   </script>
 
 </body>
